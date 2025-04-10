@@ -1,0 +1,100 @@
+<!DOCTYPE html>
+<html lang="es">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Controles Sanitarios</title>
+    <link rel="stylesheet" href="../css/controles.css">
+    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.0.0/css/all.min.css">
+</head>
+<body>
+    <div id="toastContainer" class="toast-container"></div>
+    <header>
+        <nav>
+            <div class="logo-container">
+                <img src="../img/logo.png" alt="Logo del sistema">
+                <h1>Controles Sanitarios</h1>
+            </div>
+            <ul>
+                <li><a href="../accesos/menu.html">Inicio</a></li>
+                <li><a href="../accesos/registro.html">Gestión de Animales</a></li>
+                <li><a href="../accesos/reportes.html">Reportes</a></li>
+            </ul>
+        </nav>
+    </header>
+    
+    <main>
+        <section class="control-panel">
+            <button class="add-control" id="openModal">
+                <i class="fas fa-plus"></i> Agregar Control
+            </button>
+        </section>
+
+        <section class="table-container">
+            <table>
+                <thead>
+                    <tr>
+                        <th>Número de Arete</th>
+                        <th>Tipo</th>
+                        <th>Fecha</th>
+                        <th>Descripción</th>
+                        <th>Acciones</th>
+                    </tr>
+                </thead>
+                <tbody></tbody>
+            </table>
+        </section>
+    </main>
+    
+    <div class="modal" id="modal">
+        <div class="modal-content">
+            <h2>Agregar Control Sanitario</h2>
+            <form id="control-form">
+                <label for="animal">Arete del Animal:</label>
+                <select id="animal">
+                    <!-- Opciones se llenarán dinámicamente -->
+                </select>
+
+                <label for="tipo">Tipo de Control:</label>
+                <input type="text" id="tipo">
+                
+                <label for="fecha">Fecha:</label>
+                <input type="date" id="fecha">
+                
+                <label for="descripcion">Descripción:</label>
+                <textarea id="descripcion"></textarea>
+                
+                <button type="submit">Guardar</button>
+                <button type="button" id="closeModal">Cancelar</button>
+            </form>
+            <p class="error-message" id="errorMessage"></p>
+            
+        </div>
+    </div>
+
+    <div class="modal" id="editModal">
+        <div class="modal-content">
+            <h2>Editar Control Sanitario</h2>
+            <form id="edit-form">
+                <label for="edit-tipo">Tipo de Control:</label>
+                <input type="text" id="edit-tipo">
+                
+                <label for="edit-fecha">Fecha:</label>
+                <input type="date" id="edit-fecha">
+                
+                <label for="edit-descripcion">Descripción:</label>
+                <textarea id="edit-descripcion"></textarea>
+                
+                <button type="submit">Guardar Cambios</button>
+                <button type="button" id="closeEditModal">Cancelar</button>
+            </form>
+            <p class="error-message" id="editErrorMessage"></p>
+        </div>
+    </div>
+    
+    <footer>
+        <p>&copy; 2025 Sistema de Inventario Ganadero | Contacto: soporte@ganaderia.com</p>
+    </footer>
+    <script src="../js/controles.js"></script>
+</body>
+</html>

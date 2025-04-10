@@ -1,0 +1,63 @@
+<!DOCTYPE html>
+<html lang="es">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Configuración del Administrador</title>
+    <link rel="stylesheet" href="../css/usuarios.css">
+    <link rel="icon" type="icon/image" href="../img/logo.png">
+</head>
+<body>
+    <header>
+        <nav>
+            <div class="logo-container">
+                <img src="../img/logo.png" alt="Logo del sistema">
+                <h1>Configuración del Administrador</h1>
+            </div>
+            <ul>
+                <li><a href="../accesos/menu.html">Inicio</a></li>
+                <li class="dropdown">
+                    <a href="#">Gestión</a>
+                    <ul class="dropdown-menu">
+                        <li><a href="../accesos/registro.html">Gestión de Animales</a></li>
+                        <li><a href="../accesos/reportes.html">Reportes</a></li>
+                        <li><a href="../accesos/controles.html">Controles Sanitarios</a></li>
+                        <li><button id="cierre-sesion">Cerrar Sesión</button></li>
+                    </ul>
+                </li>
+            </ul>
+        </nav>
+    </header>
+    
+    <main>
+        <section class="config-form">
+            <h2>Información del Administrador</h2>
+            <form id="config-form">
+                <label for="nombre">Nombre:</label>
+                <input type="text" id="nombre" name="nombre" placeholder="Nombre del Administrador" required>
+                
+                <label for="password">Nueva Contraseña:</label>
+                <input type="password" id="password" name="password" placeholder="Ingrese nueva contraseña">
+                
+                <h2>Preferencias de Notificación</h2>
+                <label>
+                    <input type="checkbox" id="notificaciones" checked>
+                    Activar notificaciones por correo
+                </label>
+                <label>
+                    <input type="checkbox" id="alertas"> 
+                    Activar alertas en pantalla
+                </label>
+                
+                <button type="submit">Guardar Cambios</button>
+            </form>
+        </section>
+    </main>
+    
+    <footer>
+        <p>&copy; 2025 Sistema de Inventario Ganadero | Contacto: soporte@ganaderia.com</p>
+    </footer>
+    
+    <script src="../js/usuarios.js"></script>
+</body>
+</html>

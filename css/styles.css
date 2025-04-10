@@ -1,0 +1,401 @@
+/* Estilos generales */
+body {
+    font-family: 'Poppins', Arial, sans-serif;
+    margin: 0;
+    padding: 0;
+    background-color: #cbe3c1;
+    color: #333;
+    display: flex;
+    flex-direction: column;
+    min-height: 100vh;
+}
+
+/* Cabecera y navegación */
+header {
+    background-color: #984216;
+    padding: 5px 0;
+}
+
+nav {
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+    max-width: 1200px;
+    margin: 0 auto;
+    padding: 0 20px;
+}
+
+nav a{
+    font-size: 20px;
+}
+
+/* Contenedor del logo */
+.logo-container {
+    display: flex;
+    align-items: center;
+    gap: 5px;
+}
+
+.logo-container img {
+    width: 100px;
+    height: auto;
+}
+
+/* Estilos del título en el navbar */
+nav h1 {
+    font-size: 28px;
+    color: white;
+    text-shadow: 1px 1px 3px rgba(0, 0, 0, 0.5);
+}
+
+/* Menú de navegación */
+nav ul {
+    list-style: none;
+    display: flex;
+    align-items: center;
+    gap: 20px;
+}
+
+nav ul li {
+    display: inline;
+}
+
+nav ul li a {
+    display: flex;
+    align-items: center;
+    color: white;
+    text-decoration: none;
+    font-weight: bold;
+    padding: 10px 15px;
+    border-radius: 5px;
+    transition: background-color 0.3s ease-in-out, transform 0.3s ease-in-out;
+}
+
+nav ul li a:hover {
+    background: rgba(255, 255, 255, 0.2);
+    transform: scale(1.05);
+}
+
+/* Botón de usuario */
+.usuario-btn {
+    display: flex;
+    align-items: center;
+    gap: 8px;
+}
+
+/* Estilos del dropdown de notificaciones */
+.dropdown {
+    position: relative;
+    display: inline-block;
+    cursor: pointer;
+}
+
+.dropdown a {
+    text-decoration: none;
+    color: white;
+    font-weight: bold;
+    display: flex;
+    align-items: center;
+    gap: 8px;
+    padding: 10px 15px;
+    border-radius: 8px;
+    transition: all 0.3s ease;
+    background: transparent; /* Cambia el fondo a transparente */
+}
+
+.dropdown a:hover {
+    background: rgba(255, 255, 255, 0.2); /* Opcional: efecto hover */
+}
+
+/* Ícono de notificación */
+.dropdown a i {
+    font-size: 18px;
+}
+
+.notif-badge {
+    background: red;
+    color: white;
+    font-size: 12px;
+    font-weight: bold;
+    border-radius: 50%;
+    width: 18px;
+    height: 18px;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    position: absolute;
+    top: 5px;
+    right: 5px;
+}
+
+
+
+.dropdown-content {
+    display: none;
+    position: absolute;
+    top: 100%;
+    right: 0;
+    background: #fff;
+    border-radius: 8px;
+    width: 300px; /* Ajusta el ancho del dropdown */
+    max-height: 400px; /* Limita la altura máxima */
+    overflow-y: auto; /* Agrega scroll si hay muchas notificaciones */
+    box-shadow: 0px 4px 10px rgba(0, 0, 0, 0.2);
+    padding: 10px;
+    opacity: 0;
+    transform: translateY(-10px);
+    transition: opacity 0.3s, transform 0.3s;
+}
+
+
+.dropdown.active .dropdown-content {
+    display: block;
+    opacity: 1;
+    transform: translateY(0);
+}
+
+.dropdown-content li {
+    padding: 10px;
+    font-size: 14px;
+    color: #333;
+    border-bottom: 1px solid #E4D6C5;
+    cursor: pointer;
+    transition: background-color 0.3s ease;
+}
+
+.dropdown-content li:hover {
+    background: #F5E8D7;
+}
+
+.dropdown-content p {
+    text-align: center;
+    color: #666;
+    font-size: 14px;
+    padding: 10px;
+}
+
+.dropdown-content li:last-child {
+    border-bottom: none;
+}
+
+
+.dropdown-content p {
+    text-align: center;
+    color: #666;
+    font-size: 14px;
+    padding: 10px;
+}
+
+
+
+/* Sección de opciones */
+.options {
+    display: flex;
+    flex-wrap: wrap; /* Permite que las opciones se acomoden en varias líneas si es necesario */
+    justify-content: center; /* Centra las opciones horizontalmente */
+    align-items: center; /* Centra verticalmente si el contenedor tiene altura definida */
+    gap: 30px;
+    max-width: 1200px;
+    width: 100%;
+    margin: 50px auto; /* Asegura que el contenedor también esté centrado */
+    margin-top: 40px; /* Agrega separación del header */
+}
+
+
+.option-box {
+    background: white;
+    padding: 20px;
+    border-radius: 10px;
+    text-align: center;
+    width: 300px;
+    height: 400px; /* Altura fija para todas las tarjetas */
+    display: flex;
+    flex-direction: column;
+    justify-content: space-between; /* Asegura que los elementos internos estén distribuidos */
+    box-shadow: 0 4px 8px rgba(0, 0, 0, 0.2);
+    transition: transform 0.3s, box-shadow 0.3s;
+}
+
+.option-box:hover {
+    transform: scale(1.05);
+    box-shadow: 0 6px 12px rgba(0, 0, 0, 0.3);
+}
+
+.option-box img {
+    width: 100%;
+    height: 200px; /* Asegura que las imágenes tengan la misma altura */
+    object-fit: cover; /* Ajusta la imagen para que se recorte proporcionalmente */
+    border-radius: 10px;
+}
+
+.option-box h3 {
+    margin: 15px 0;
+    color: #984216;
+}
+
+.option-box p {
+    font-size: 16px;
+    color: #555;
+}
+
+.option-box .btn {
+    display: inline-block;
+    margin-top: 10px;
+    padding: 10px 15px;
+    background: #984216;
+    color: white;
+    text-decoration: none;
+    border-radius: 5px;
+    font-weight: bold;
+    transition: opacity 0.3s ease-in-out;
+}
+
+.option-box .btn:hover {
+    background: #7b3411;
+}
+
+/* Botón dentro de la tarjeta */
+.btn {
+    display: inline-block;
+    padding: 10px 15px;
+    background-color: #984216;
+    color: white;
+    text-decoration: none;
+    border-radius: 5px;
+    font-weight: bold;
+    transition: opacity 0.3s ease-in-out;
+}
+
+.btn:hover {
+    background-color: #7a3312;
+}
+
+/* Estilos del pie de página */
+footer {
+    background-color: #984216;
+    color: white;
+    text-align: center;
+    padding: 10px;
+    margin-top: auto;
+    border-top: 3px solid #7b3411;
+    box-shadow: 0 -3px 8px rgba(0, 0, 0, 0.2);
+}
+
+@keyframes slideDown {
+    from {
+        opacity: 0;
+        transform: translateY(-10px);
+    }
+
+    to {
+        opacity: 1;
+        transform: translateY(0);
+    }
+}
+
+/* Media query para pantallas pequeñas (máximo 768px) */
+@media (max-width: 768px) {
+    /* Ajustar el body */
+    body {
+        flex-direction: column; /* Cambiar a diseño en columna */
+        padding: 0;
+    }
+
+    /* Header */
+    header {
+        padding: 10px 0;
+    }
+
+    nav {
+        flex-direction: column; /* Cambiar a diseño en columna */
+        align-items: center;
+        gap: 10px;
+        margin: 0 auto;
+    }
+
+    .logo-container {
+        flex-direction: column; /* Cambiar a diseño en columna */
+        align-items: center;
+        gap: 5px;
+    }
+
+    .logo-container img {
+        max-width: 60px; /* Reducir el tamaño del logo */
+    }
+
+    .logo-container h1 {
+        font-size: 1.2rem; /* Reducir el tamaño del texto */
+        text-align: center;
+    }
+
+    nav ul {
+        flex-direction: column; /* Cambiar a diseño en columna */
+        gap: 10px;
+        width: 90%; /* Ocupa todo el ancho */
+        text-align: center;
+        margin: 0 auto;
+        padding: 0;
+    }
+
+    nav ul li a {
+        font-size: 16px; /* Reducir el tamaño de fuente */
+        padding: 8px 15px;
+    }
+
+
+    /* Opciones */
+    .options {
+        display: flex;
+        flex-direction: column; /* Cambiar a diseño en columna */
+        align-items: center; /* Centrar horizontalmente */
+        justify-content: center; /* Centrar verticalmente si es necesario */
+        gap: 20px; /* Espaciado entre las tarjetas */
+        padding: 10px;
+        margin: auto; /* Centrar el contenedor */
+        width: 90%; /* Asegurar que ocupe todo el ancho */
+    }
+
+    /* Tarjetas individuales */
+    .option-box {
+        width: 70%; /* Ajustar el ancho de las tarjetas */
+        height: auto;
+        max-width: 300px; /* Limitar el tamaño máximo */
+        margin: 0 auto; /* Centrar cada tarjeta */
+    }
+
+    .option-box img {
+        width: 90%; /* Ajustar el ancho de las imágenes */
+        height: auto; /* Mantener la proporción */
+        border-radius: 10px; /* Mantener bordes redondeados */
+    }
+
+    .option-box img {
+        width: 90%; /* Ajustar el ancho de las imágenes */
+        height: auto; /* Mantener la proporción */
+        max-width: 300px; /* Limitar el tamaño máximo */
+        margin: 30px auto; /* Centrar la imagen */
+    }
+
+    .option-box h3 {
+        margin: 5px 0;
+        font-size: 1.2rem; /* Reducir el tamaño del texto */
+    }
+
+    .option-box p {
+        margin: 5px 0;
+        font-size: 14px; /* Reducir el tamaño del texto */
+    }
+
+    .option-box .btn {
+        margin: 15px auto;;
+        font-size: 14px; /* Reducir el tamaño del botón */
+        padding: 8px 10px;
+        width: 70%;
+    }
+
+    /* Footer */
+    footer {
+        padding: 10px 0;
+        font-size: 0.8rem; /* Reducir el tamaño del texto */
+    }
+}

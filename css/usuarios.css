@@ -1,0 +1,292 @@
+body {
+    font-family: Arial, sans-serif;
+    margin: 0;
+    padding: 0;
+    background-color: #cbe3c1;
+    color: #333;
+}
+
+.logo-container {
+    display: flex;
+    align-items: center;
+    gap: 10px;
+}
+
+.logo-container img {
+    width: 100px;
+    height: auto;
+}
+
+header {
+    background-color: #984216;
+    padding: 5px 0;
+}
+
+nav {
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+    max-width: 1200px;
+    margin: 0 auto;
+    padding: 0 20px;
+}
+
+nav h1 {
+    color: white;
+    font-size: 28px;
+}
+
+nav ul {
+    list-style: none;
+    padding: 0;
+    margin: 0;
+    display: flex;
+}
+
+nav ul li {
+    position: relative;
+}
+
+nav ul li a {
+    text-decoration: none;
+    padding: 10px 15px;
+    display: block;
+    color: white;
+    font-size: 20px;
+    font-weight: bold;
+}
+
+nav ul li .dropdown-menu {
+    display: none;
+    position: absolute;
+    top: 100%;
+    left: 0;
+    background: rgba(0, 0, 0, 0.5);
+    box-shadow: 0 4px 6px rgba(0, 0, 0, 0.1);
+    list-style: none;
+    padding: 0;
+    margin: 0;
+    border-radius: 8px;
+    z-index: 1000;
+}
+
+nav ul li .dropdown-menu li a {
+    padding: 10px 15px;
+    white-space: nowrap;
+}
+
+nav ul li:hover .dropdown-menu {
+    display: block;
+}
+
+main {
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    height: 80vh;
+}
+
+.config-form {
+    background: white;
+    padding: 20px;
+    border-radius: 10px;
+    box-shadow: 0 0 10px rgba(0, 0, 0, 0.1);
+    width: 350px;
+    height: auto;
+}
+
+h2 {
+    font-size: 20px;
+    margin-bottom: 10px;
+    color: #984216;
+}
+
+label {
+    display: block;
+    margin-top: 10px;
+    font-size: 16px;
+}
+
+input[type="text"], input[type="password"] {
+    width: 80%;
+    padding: 8px;
+    margin-top: 5px;
+    border: 1px solid #ccc;
+    border-radius: 5px;
+}
+
+button {
+    width: 85%;
+    background-color:#8D957E;
+    color: white;
+    padding: 10px;
+    margin: 15px auto;
+    display: block;
+    border: none;
+    border-radius: 5px;
+    cursor: pointer;
+}
+
+button:hover {
+    background-color: #78898F
+}
+
+
+/* Estilo para el botón de cerrar sesión */
+#cierre-sesion {
+    text-decoration: none;
+    padding: 10px 15px;
+    display: block;
+    color: white;
+    font-size: 20px;
+    font-weight: bold;
+    background: none;
+    border: none;
+    text-align: left;
+    padding: 0;
+}
+
+
+footer {
+    text-align: center;
+    padding: 10px;
+    background-color: #984216;
+    color: white;
+    position: fixed;
+    bottom: 0;
+    width: 100%;
+}
+
+/* Estilo para el botón de cerrar sesión */
+li button {
+    background: none;
+    border: none;
+    color: inherit;
+    font: inherit;
+    cursor: pointer;
+    text-decoration: none;
+    padding: 0;
+}
+
+li button:hover {
+    text-decoration: underline;
+}
+
+.password-container {
+    position: relative;
+    display: flex;
+    align-items: center;
+}
+
+.password-container input {
+    flex: 1;
+}
+
+.password-container button {
+    background: none;
+    border: none;
+    cursor: pointer;
+    position: absolute;
+    right: 10px;
+    font-size: 1.2em;
+    color: #666;
+}
+
+.password-container button:focus {
+    outline: none;
+}
+
+.toggle-password {
+    width: 50px;
+    background: none;
+    border: none;
+    cursor: pointer;
+    margin-left: 10px;
+    color: #984216;
+}
+.toggle-password:hover {
+    color: #7a3312;
+}
+
+/* Media query para pantallas móviles */
+@media (max-width: 768px) {
+    html, body {
+        margin: 0;
+        padding: 0;
+        width: 100%;
+        height: 100%;
+    }
+
+    .logo-container img {
+        width: 70px;
+    }
+
+    nav {
+        flex-direction: column;
+        align-items: flex-start;
+        padding: 10px;
+    }
+
+    nav h1 {
+        font-size: 24px;
+        margin-bottom: 10px;
+        text-align: center;
+    }
+
+    nav ul {
+        flex-direction: column;
+        gap: 10px;
+        text-align: center;
+    }
+
+    nav ul li a {
+        font-size: 18px;
+        padding: 8px 10px;
+        text-align: center;
+    }
+
+    main {
+        flex-direction: column;
+        height: auto;
+        padding: 20px;
+    }
+
+    .config-form {
+        width: 80%;
+        height: 70%;
+        padding: 15px;
+    }
+
+    .config-form label {
+        font-size: 14px;
+    }
+
+    .config-form h2{
+        font-size: 18px;
+        text-align: center;
+    }
+
+    input[type="text"], input[type="password"] {
+        width: 70%;
+        margin: 0 auto;
+    }
+
+    button {
+        width: 50%;
+    }
+
+    footer {
+        font-size: 14px;
+        padding: 8px;
+    }
+
+    .password-container button {
+        right: 5px;
+        font-size: 1em;
+    }
+
+    .toggle-password {
+        width: 40px;
+        margin-left: 5px;
+    }
+}

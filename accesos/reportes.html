@@ -1,0 +1,55 @@
+<!DOCTYPE html>
+<html lang="es">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Reportes y Estadísticas</title>
+    <link rel="icon" type="icon/image" href="../img/logo.png">
+    <link rel="stylesheet" href="../css/stylesReportes.css">
+    <script src="../js/reportes.js" defer></script>
+</head>
+<body>
+    <header>
+        <nav>
+            <div class="logo-container">
+                <img src="../img/logo.png" alt="Logo del sistema">
+                <h1>Reportes y Estadísticas</h1>
+            </div>
+            <ul>
+                <li><a href="../accesos/menu.html">Inicio</a></li>
+                <li><a href="../accesos/registro.html">Gestión de Animales</a></li>
+                <li><a href="../accesos/controles.html">Controles Sanitarios</a></li>
+            </ul>
+        </nav>
+    </header>
+    
+    <main>
+        <section class="reportes-container">
+            <div class="reportes-section">
+                <div class="report-box">
+                    <h3>Reportes de animales</h3>
+                    <p>Consulta información detallada sobre tu ganado.</p>
+                    <button onclick="abrirReporteAnimales()" class="btn">Ver Reportes</button>
+                </div>
+                <div class="report-box">
+                    <h3>Reportes de controles</h3>
+                    <p>Accede al historial de controles sanitarios y programaciones.</p>
+                    <button onclick="abrirReporteControles()" class="btn">Ver Reportes</button>
+                </div>
+            </div>
+            <aside class="notifications-section">
+                <h3>Alertas/Notificaciones</h3>
+                <ul>
+                    <li>Vacuna programada para el 25 de febrero</li>
+                    <li>Revisión de peso pendiente</li>
+                    <li>Control antiparasitario en 3 días</li>
+                </ul>
+            </aside>
+        </section>
+    </main>
+    
+    <footer>
+        <p>&copy; 2025 Sistema de Inventario Ganadero | Contacto: soporte@ganaderia.com</p>
+    </footer>
+</body>
+</html>
