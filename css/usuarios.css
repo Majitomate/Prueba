@@ -58,6 +58,7 @@ nav ul li a {
 }
 
 nav ul li .dropdown-menu {
+    margin-right: 30px;
     display: none;
     position: absolute;
     top: 100%;
